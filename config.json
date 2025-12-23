@@ -1,0 +1,59 @@
+{
+  "_notes": {
+    "how_to_use": "Modifie les champs ci-dessous. Les sections peuvent être masquées avec enabled: false.",
+    "youtube": "Tu peux mettre une URL complète (https://youtu.be/... ou https://www.youtube.com/watch?v=...).",
+    "images": "Mets des chemins relatifs (ex: assets/photo1.jpg) ou des URLs (https://...).",
+    "logo": "Le logo est un SVG placé dans assets/logo.svg."
+  },
+
+  "branding": {
+    "siteName": "NADAK",
+    "baseline": "Une trace, un lien, une porte.",
+    "birthDate": "1994-10-18",
+    "logoPath": "assets/logo.svg"
+  },
+
+  "theme": {
+    "backgroundGradient": "radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,0.06), transparent 60%), linear-gradient(135deg, #0b0f18, #06070a 60%, #0b0f18)",
+    "textColor": "#f2f4f8",
+    "mutedTextColor": "rgba(242,244,248,0.72)"
+  },
+
+  "blocks": {
+    "textBlock": {
+      "enabled": true,
+      "text": "« On ne se définit pas. On se construit. »\n\n« Minimal, mais vivant. »"
+    },
+
+    "photoGallery": {
+      "enabled": true,
+      "images": [
+        "assets/photo1.jpg",
+        "assets/photo2.jpg",
+        "assets/photo3.jpg",
+        "assets/photo4.jpg"
+      ]
+    },
+
+    "youtube": {
+      "enabled": true,
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+
+    "gif": {
+      "enabled": true,
+      "url": "https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif",
+      "alt": "GIF"
+    }
+  },
+
+  "social": {
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/",
+    "tiktok": "https://tiktok.com/"
+  },
+
+  "footer": {
+    "copyright": "© 2025 NADAK"
+  }
+}
