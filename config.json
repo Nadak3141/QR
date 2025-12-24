@@ -1,59 +1,31 @@
-{
-  "_notes": {
-    "how_to_use": "Modifie les champs ci-dessous. Les sections peuvent être masquées avec enabled: false.",
-    "youtube": "Tu peux mettre une URL complète (https://youtu.be/... ou https://www.youtube.com/watch?v=...).",
-    "images": "Mets des chemins relatifs (ex: assets/photo1.jpg) ou des URLs (https://...).",
-    "logo": "Le logo est un SVG placé dans assets/logo.svg."
+// Tout ce que tu veux modifier se fait ici.
+window.SITE_CONFIG = {
+  // Splash
+  splashMinDurationMs: 900, // durée mini de l'écran noir avant fade
+
+  // Timer "né depuis" (format ISO conseillé)
+  birthDateISO: "1994-10-18T00:00:00+01:00",
+
+  // Header / Footer
+  brandName: "Nadak",
+  copyrightYear: 2025,
+
+  // Modules (affichage)
+  modules: {
+    quote: { enabled: true },
+    photo: { enabled: true, alt: "Photo Manquante" },
+    youtube: { enabled: true }
   },
 
-  "branding": {
-    "siteName": "NADAK",
-    "baseline": "Une trace, un lien, une porte.",
-    "birthDate": "1994-10-18",
-    "logoPath": "assets/logo.svg"
-  },
+  // Contenu
+  quoteText: "Je ne perd Jamais, soit je gagne, soit j'apprends - Nelson Mandela",
+  youtubeUrl: "https://www.youtube.com/watch?v=4zejNFhvAGo",
 
-  "theme": {
-    "backgroundGradient": "radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,0.06), transparent 60%), linear-gradient(135deg, #0b0f18, #06070a 60%, #0b0f18)",
-    "textColor": "#f2f4f8",
-    "mutedTextColor": "rgba(242,244,248,0.72)"
-  },
-
-  "blocks": {
-    "textBlock": {
-      "enabled": true,
-      "text": "« On ne se définit pas. On se construit. »\n\n« Minimal, mais vivant. »"
-    },
-
-    "photoGallery": {
-      "enabled": true,
-      "images": [
-        "assets/photo1.jpg",
-        "assets/photo2.jpg",
-        "assets/photo3.jpg",
-        "assets/photo4.jpg"
-      ]
-    },
-
-    "youtube": {
-      "enabled": true,
-      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    },
-
-    "gif": {
-      "enabled": true,
-      "url": "https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif",
-      "alt": "GIF"
-    }
-  },
-
-  "social": {
-    "facebook": "https://facebook.com/",
-    "instagram": "https://instagram.com/",
-    "tiktok": "https://tiktok.com/"
-  },
-
-  "footer": {
-    "copyright": "© 2025 NADAK"
+  // Réseaux (mettre "" pour cacher automatiquement)
+  socialLinks: {
+    facebook: "https://www.facebook.com/nadroj.ikslawok/?locale=fr_FR",
+    instagram: "https://instagram.com/nadak_3141",
+    linkedin: "https://www.linkedin.com/in/jordan-arnt-kowalski-9142a630a/",
+    tiktok: "https://www.tiktok.com/@nadak_3220?_r=1&_t=ZN-92Thxkr60hC"
   }
-}
+};
