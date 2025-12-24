@@ -1,27 +1,38 @@
-// Tout ce que tu veux modifier se fait ici.
 window.SITE_CONFIG = {
   // Splash
-  splashMinDurationMs: 900, // durée mini de l'écran noir avant fade
+  splashMinDurationMs: 900,
 
-  // Timer "né depuis" (format ISO conseillé)
-  birthDateISO: "1994-10-18T00:00:00+01:00",
+  // Timer "Né depuis"
+  birthDateISO: "1994-10-18T12:05:00+01:00",
 
-  // Header / Footer
+  // Branding
   brandName: "Nadak",
   copyrightYear: 2025,
 
-  // Modules (affichage)
+  // Modules
   modules: {
-    quote: { enabled: true },
-    photo: { enabled: true, alt: "Photo Manquante" },
-    youtube: { enabled: true }
+    photoTextBlock: { enabled: true },
+    youtubeBackground: { enabled: true }
   },
 
-  // Contenu
-  quoteText: "Je ne perd Jamais, soit je gagne, soit j'apprends - Nelson Mandela",
+  // Contenu bloc (photo + texte)
+  photo: {
+    src: "./assets/photo.jpg",
+    alt: "Photo"
+  },
+
+  // Texte :
+  // - soit "quoteText" (texte brut + retours ligne via \n ou template string)
+  // - soit "quoteHtml" (HTML minimal: <strong>, <em>, <br>)
+  //quoteText: `Je ne perds jamais,
+  //soit je gagne,
+  //soit j'apprends.`,
+  quoteHtml: `Je ne perds jamais,<br>soit je <strong>gagne</strong>,<br>soit <em>j'apprends</em>.`,
+
+  // YouTube (lecture cachée déclenchée par bouton footer)
   youtubeUrl: "https://www.youtube.com/watch?v=4zejNFhvAGo",
 
-  // Réseaux (mettre "" pour cacher automatiquement)
+  // Réseaux (mettre "" pour cacher)
   socialLinks: {
     facebook: "https://www.facebook.com/nadroj.ikslawok/?locale=fr_FR",
     instagram: "https://instagram.com/nadak_3141",
