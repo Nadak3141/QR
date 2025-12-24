@@ -3,92 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NADAK</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  <title>Nadak</title>
 
-  <!-- Splash -->
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0b0b0c" />
+</head>
+
+<body>
+  <!-- Splash / écran de chargement -->
   <div id="splash" class="splash" aria-hidden="true">
-    <div class="splash-inner">
-      <img id="splashLogo" class="splash-logo" alt="Logo" />
-    </div>
+    <img class="splash__logo" src="assets/logo.svg" alt="Logo Nadak" />
   </div>
 
-  <div class="page">
-    <!-- Header / Bandeau -->
+  <!-- App -->
+  <div id="app" class="app app--hidden">
     <header class="header">
-      <div class="brand">
-        <img id="headerLogo" class="logo" alt="Logo" />
-        <div class="baseline" id="baseline"></div>
-        <div class="counters">
-          <div class="counter-line">
-            <span class="muted">Jours depuis ma naissance :</span>
-            <span id="daysSinceBirth" class="value">—</span>
-          </div>
-          <div class="counter-line">
-            <span class="muted">Maintenant :</span>
-            <span id="liveClock" class="value">—</span>
-          </div>
-        </div>
+      <img class="header__logo" src="assets/logo.svg" alt="Logo Nadak" />
+      <div class="since">
+        <span class="since__label">né depuis</span>
+        <span id="sinceTimer" class="since__value">…</span>
       </div>
     </header>
 
-    <main class="content">
-      <!-- Bloc texte -->
-      <section id="textBlock" class="block block-text" hidden>
-        <div id="textContent" class="big-centered"></div>
+    <main class="main">
+      <!-- Module citation -->
+      <section id="moduleQuote" class="module module--quote" hidden>
+        <p id="quoteText" class="quote"></p>
       </section>
 
-      <!-- Galerie -->
-      <section id="photoGallery" class="block" hidden>
-        <div id="galleryGrid" class="gallery"></div>
-      </section>
-
-      <!-- YouTube -->
-      <section id="youtubeBlock" class="block" hidden>
-        <div class="video-wrap">
-          <iframe
-            id="youtubeFrame"
-            title="YouTube"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+      <!-- Module photo -->
+      <section id="modulePhoto" class="module module--media" hidden>
+        <div class="media">
+          <img id="photoEl" class="media__img" src="assets/photo.jpg" alt="" />
         </div>
       </section>
 
-      <!-- GIF -->
-      <section id="gifBlock" class="block" hidden>
-        <div class="gif-wrap">
-          <img id="gifImg" alt="GIF" />
+      <!-- Module vidéo YouTube -->
+      <section id="moduleYoutube" class="module module--media" hidden>
+        <div class="video">
+          <iframe
+            id="youtubeFrame"
+            class="video__frame"
+            title="Vidéo YouTube"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-left" id="footerCopyright"></div>
-      <div class="footer-right">
-        <a id="fbLink" class="icon-btn" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5h1.7V5c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V11H7.1v3h2.7v8h3.7z"/></svg>
-        </a>
-        <a id="igLink" class="icon-btn" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.6-.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/></svg>
-        </a>
-        <a id="ttLink" class="icon-btn" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.8 3c.5 2.8 2.1 4.4 4.2 4.8V11c-1.7-.1-3.2-.7-4.3-1.7v6.3c0 3.6-2.5 6.4-6.4 6.4-3 0-5.5-2.1-6.1-4.9-.8-3.8 2-7.2 5.9-7.2.4 0 .8 0 1.2.1v3.4c-.3-.1-.6-.2-1-.2-1.9 0-3.2 1.8-2.4 3.6.3.9 1.1 1.6 2 1.8 1.9.5 3.4-.9 3.4-2.7V3h3.5z"/></svg>
-        </a>
+      <div class="footer__left">
+        <span id="copyrightText">© 2025 Nadak</span>
       </div>
+
+      <nav class="social" aria-label="Réseaux sociaux">
+        <a id="linkFacebook" class="social__link" href="#" target="_blank" rel="noopener" aria-label="Facebook" hidden>
+          <!-- Facebook icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.3-1.6 1.6-1.6H16.8V4.8c-.3 0-1.4-.1-2.7-.1-2.7 0-4.6 1.7-4.6 4.8V11H7v3h2.5v8h4z"/></svg>
+        </a>
+
+        <a id="linkInstagram" class="social__link" href="#" target="_blank" rel="noopener" aria-label="Instagram" hidden>
+          <!-- Instagram icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.7 6.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+        </a>
+
+        <a id="linkLinkedIn" class="social__link" href="#" target="_blank" rel="noopener" aria-label="LinkedIn" hidden>
+          <!-- LinkedIn icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 6.8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM5 21V9h3.8v12H5zm6.3 0V9H15v1.7h.1A4.1 4.1 0 0 1 19 8.6c4 0 4.8 2.6 4.8 6.1V21H20v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-3.8z"/></svg>
+        </a>
+
+        <a id="linkTikTok" class="social__link" href="#" target="_blank" rel="noopener" aria-label="TikTok" hidden>
+          <!-- TikTok icon (simple) -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.7 2.2 4.4 4.6 4.6v3.2c-1.7 0-3.3-.5-4.6-1.5v6.8c0 3.5-2.8 6-6.2 6-3.3 0-6.3-2.7-6.3-6.5 0-3.7 3-6.4 6.7-6.4.4 0 .8 0 1.2.1v3.5c-.4-.1-.8-.2-1.2-.2-1.7 0-3.1 1.2-3.1 2.9 0 1.8 1.3 3 2.9 3 1.8 0 3-1.1 3-3.4V3h3z"/></svg>
+        </a>
+      </nav>
     </footer>
   </div>
 
-  <!-- Modal image -->
-  <div id="modal" class="modal" hidden aria-hidden="true">
-    <button id="modalClose" class="modal-close" aria-label="Fermer">×</button>
-    <img id="modalImg" class="modal-img" alt="Aperçu" />
-  </div>
-
-  <script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
