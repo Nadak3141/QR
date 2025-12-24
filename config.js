@@ -27,7 +27,7 @@ window.SITE_CONFIG = {
   //quoteText: `Je ne perds jamais,
   //soit je gagne,
   //soit j'apprends.`,
-  quoteHtml: `Je ne perds jamais,<br>soit je <strong>gagne</strong>,<br>soit <em>j'apprends</em>.`,
+  quoteHtml: `<em>« Je ne perds jamais,<br>soit je gagne, soit j'apprends. »</em><br>- Nelson Mandela `,
 
   // YouTube (lecture cachée déclenchée par bouton footer)
   youtubeUrl: "https://www.youtube.com/watch?v=4zejNFhvAGo",
